@@ -1,4 +1,5 @@
-# Thenoppy12's WurstLike-Meteor Addon
+# NoppyAddon-Meteor 
+## by thenoppy12 (Discord: .thenoppy12)
 like the description
 
 ### Project structure
