@@ -19,21 +19,23 @@ like the description
 │       │   ╰── sources
 │       │       ╰── net
 │       │           ╰── thenoppy12
-|       |               ╰── wurstlike
-|       |                   ╰── addon
+│        │                ╰── wurstlike
+│        │                    ╰── addon
 │       │                       │── commands
 │       │                       │   ╰── CommandExample
 │       │                       │── hud
 │       │                       │   ╰── HudExample
 │       │                       │── modules
 │       │                       │   ╰── ModuleExample
-│       │                       ╰── NoppyAddon.java
-|       |
+│       │                       │── mixin
+│       │                       │   ╰── ExampleMixin
+│       │                       ╰── NoppyAddon
+│       │ 
 │       ╰── resources
 │           │── assets
-│           │   ╰── template
+│           │   ╰── noppyaddon
 │           │       ╰── icon.png
-│           │── addon-template.mixins.json
+│           │── noppyaddon.mixins.json
 │           ╰── fabric.mod.json
 │── .gitignore
 │── build.gradle
