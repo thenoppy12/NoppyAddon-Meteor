@@ -19,8 +19,8 @@ like the description
 │       │   ╰── sources
 │       │       ╰── net
 │       │           ╰── thenoppy12
-│        │                ╰── wurstlike
-│        │                    ╰── addon
+│       │               ╰── wurstlike
+│       │                   ╰── addon
 │       │                       │── commands
 │       │                       │   ╰── CommandExample
 │       │                       │── hud
