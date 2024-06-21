@@ -1,6 +1,6 @@
-package com.example.addon.mixin;
+package sources.net.thenoppy12.noppyaddon.mixin;
 
-import com.example.addon.AddonTemplate;
+import sources.net.thenoppy12.noppyaddon.NoppyAddon;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.RunArgs;
 import org.spongepowered.asm.mixin.Mixin;
@@ -26,6 +26,6 @@ public abstract class ExampleMixin {
      */
     @Inject(method = "<init>", at = @At("TAIL"))
     private void onGameLoaded(RunArgs args, CallbackInfo ci) {
-        AddonTemplate.LOG.info("Hello from ExampleMixin!");
+        NoppyAddon.LOG.info("Hello from ExampleMixin!");
     }
 }

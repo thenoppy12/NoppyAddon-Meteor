@@ -1,8 +1,8 @@
-package com.example.addon;
+package sources.net.thenoppy12.noppyaddon;
 
-import com.example.addon.commands.CommandExample;
-import com.example.addon.hud.HudExample;
-import com.example.addon.modules.ModuleExample;
+import sources.net.thenoppy12.noppyaddon.commands.CommandExample;
+import sources.net.thenoppy12.noppyaddon.modules.ModuleExample;
+import sources.net.thenoppy12.noppyaddon.hud.HudExample;
 import com.mojang.logging.LogUtils;
 import meteordevelopment.meteorclient.addons.GithubRepo;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
@@ -13,7 +13,7 @@ import meteordevelopment.meteorclient.systems.modules.Category;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import org.slf4j.Logger;
 
-public class AddonTemplate extends MeteorAddon {
+public class NoppyAddon extends MeteorAddon {
     public static final Logger LOG = LogUtils.getLogger();
     public static final Category CATEGORY = new Category("Example");
     public static final HudGroup HUD_GROUP = new HudGroup("Example");
@@ -39,7 +39,7 @@ public class AddonTemplate extends MeteorAddon {
 
     @Override
     public String getPackage() {
-        return "com.example.addon";
+        return "sources.net.thenoppy12.wurstlike.addon";
     }
 
     @Override
