@@ -1,7 +1,7 @@
 package sources.net.thenoppy12.noppyaddon;
 
 import sources.net.thenoppy12.noppyaddon.commands.CommandExample;
-import sources.net.thenoppy12.noppyaddon.modules.ModuleExample;
+import sources.net.thenoppy12.noppyaddon.modules.PanicModule;
 import sources.net.thenoppy12.noppyaddon.hud.HudExample;
 import com.mojang.logging.LogUtils;
 import meteordevelopment.meteorclient.addons.GithubRepo;
@@ -15,21 +15,22 @@ import org.slf4j.Logger;
 
 public class NoppyAddon extends MeteorAddon {
     public static final Logger LOG = LogUtils.getLogger();
-    public static final Category CATEGORY = new Category("Example");
+    public static final Category CATEGORY = new Category("NoppyAddon");
     public static final HudGroup HUD_GROUP = new HudGroup("Example");
 
     @Override
     public void onInitialize() {
-        LOG.info("Initializing Meteor Addon Template");
+        LOG.info("Initializing NoppyAddon for Meteor");
+        LOG.info("Version: 0.1.0");
 
         // Modules
-        Modules.get().add(new ModuleExample());
+        Modules.get().add(new PanicModule());
 
         // Commands
-        Commands.add(new CommandExample());
+        //Commands.add(new CommandExample());
 
         // HUD
-        Hud.get().register(HudExample.INFO);
+        //Hud.get().register(HudExample.INFO);
     }
 
     @Override

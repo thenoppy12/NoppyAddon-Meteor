@@ -1,9 +1,8 @@
 {
-  "required": true,
-  "package": "sources.net.thenoppy12.wurstlike.addon.mixin",
+  "required": false,
+  "package": "sources.net.thenoppy12.noppyaddon.mixin",
   "compatibilityLevel": "JAVA_21",
   "client": [
-    "sources.net.thenoppy12.noppyaddon.mixin.ExampleMixin"
   ],
   "injectors": {
     "defaultRequire": 1
