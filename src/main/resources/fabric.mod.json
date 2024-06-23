@@ -14,7 +14,7 @@
   "environment": "client",
   "entrypoints": {
     "meteor": [
-      "sources.net.thenoppy12.noppyaddon.NoppyAddon"
+      "sources.net.thenoppy12.noppyaddon.NoppyInit"
     ]
   },
   "mixins": [
