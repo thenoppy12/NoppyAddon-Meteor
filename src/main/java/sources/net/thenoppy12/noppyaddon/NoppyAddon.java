@@ -1,7 +1,6 @@
 package sources.net.thenoppy12.noppyaddon;
 
 import com.mojang.logging.LogUtils;
-import meteordevelopment.meteorclient.addons.GithubRepo;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import net.minecraft.client.MinecraftClient;
@@ -19,21 +18,21 @@ public enum NoppyAddon {
 
     public void initialize() {
 
-        LOG.info("Initializing NoppyAddon for Meteor");
-        LOG.info("Version: 0.1.0");
-        LOG.info("Github: " + getRepo());
+        LOG.info("[NoppyAddon] Initializing NoppyAddon for Meteor");
+        LOG.info("[NoppyAddon] Version: 0.1.0");
+        LOG.info("[NoppyAddon] Github: https://github.com/thenoppy12/NoppyAddon-Meteor");
 
         eventManager = new EventManager(this);
 
         // Modules
         try {
-            LOG.info("Register Meteor Modules...");
+            LOG.info("[NoppyAddon] Register Meteor Modules...");
             addNoppyModules(new PanicModule());
             addNoppyModules(new NocomCrashModule());
             addNoppyModules(new VanillaSpoofModule());
-            LOG.info("Load modules completed");
+            LOG.info("[NoppyAddon] Load modules completed");
         } catch (Exception e) {
-            LOG.error("Can't load NoppyAddon modules, caught: " + e.getMessage());
+            LOG.error("[NoppyAddon] Can't load NoppyAddon modules, caught: " + e.getMessage());
         }
 
         // Commands
@@ -42,9 +41,6 @@ public enum NoppyAddon {
         // HUD
         //Hud.get().register(HudExample.INFO);
 
-    }
-    public GithubRepo getRepo() {
-        return new GithubRepo("thenoppy12", "NoppyAddon-Meteor");
     }
     public EventManager getEventManager() {
         return eventManager;
