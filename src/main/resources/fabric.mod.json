@@ -15,12 +15,6 @@
   "entrypoints": {
     "meteor": [
       "sources.net.thenoppy12.noppyaddon.NoppyInit"
-    ],
-    "server": [
-      "sources.net.thenoppy12.noppyaddon.ServerInitializer"
-    ],
-    "client":[
-      "sources.net.thenoppy12.noppyaddon.NormalClientInitializer"
     ]
   },
   "mixins": [
