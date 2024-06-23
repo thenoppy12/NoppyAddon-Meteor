@@ -31,6 +31,7 @@ public enum NoppyAddon {
             addNoppyModules(new PanicModule());
             addNoppyModules(new NocomCrashModule());
             addNoppyModules(new VanillaSpoofModule());
+            LOG.info("Load modules completed");
         } catch (Exception e) {
             LOG.error("Can't load NoppyAddon modules, caught: " + e.getMessage());
         }
