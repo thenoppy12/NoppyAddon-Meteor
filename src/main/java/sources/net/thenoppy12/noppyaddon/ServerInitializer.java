@@ -8,7 +8,7 @@ public class ServerInitializer implements DedicatedServerModInitializer {
     private static final Logger LOG = LogManager.getLogger("NoppyAddon");
     @Override
     public void onInitializeServer() {
-        LOG.fatal("THIS MOD IS CLIENT-SIDE WITH METEOR CLIENT INSTALLED, CANT RUN IN MINECRAFT SERVER");
+        LOG.fatal("[NoppyAddon] THIS MOD IS CLIENT-SIDE WITH METEOR CLIENT INSTALLED, CANT RUN IN MINECRAFT SERVER");
         System.exit(-1);
     }
 }
