@@ -12,35 +12,29 @@ import sources.net.thenoppy12.noppyaddon.modules.VanillaSpoofModule;
 
 public enum NoppyAddon {
     INSTANCE;
-    public static final Logger LOG = LogUtils.getLogger();
+    public static final Logger log = LogUtils.getLogger();
     public static final MinecraftClient MC = MinecraftClient.getInstance();
     private EventManager eventManager;
 
     public void initialize() {
-
-        LOG.info("[NoppyAddon] Initializing NoppyAddon for Meteor");
-        LOG.info("[NoppyAddon] Version: 0.1.0");
-        LOG.info("[NoppyAddon] Github: https://github.com/thenoppy12/NoppyAddon-Meteor");
-
+        log.info("\n");
+        log.info("┌──────────────────────────────────────────────────────────────────────┐");
+        log.info("│ [NoppyAddon] Initializing NoppyAddon for Meteor                      │");
+        log.info("│ [NoppyAddon] Version: 0.1.0                                          │");
+        log.info("│ [NoppyAddon] Github: https://github.com/thenoppy12/NoppyAddon-Meteor │");
+        log.info("└──────────────────────────────────────────────────────────────────────┘");
+        log.info("\n");
         eventManager = new EventManager(this);
 
-        // Modules
         try {
-            LOG.info("[NoppyAddon] Register Meteor Modules...");
+            log.info("[NoppyAddon] Register Meteor Modules...");
             addNoppyModules(new PanicModule());
             addNoppyModules(new NocomCrashModule());
             addNoppyModules(new VanillaSpoofModule());
-            LOG.info("[NoppyAddon] Load modules completed");
+            log.info("[NoppyAddon] Load modules completed\n");
         } catch (Exception e) {
-            LOG.error("[NoppyAddon] Can't load NoppyAddon modules, caught: " + e.getMessage());
+            log.error("\n[NoppyAddon] Can't load NoppyAddon modules, caught: " + e.getMessage() + "\n");
         }
-
-        // Commands
-        //Commands.add(new CommandExample());
-
-        // HUD
-        //Hud.get().register(HudExample.INFO);
-
     }
     public EventManager getEventManager() {
         return eventManager;
