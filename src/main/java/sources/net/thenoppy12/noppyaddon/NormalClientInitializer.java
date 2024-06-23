@@ -10,7 +10,7 @@ public class NormalClientInitializer implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         if (!FabricLoader.getInstance().isModLoaded("meteor-client")) {
-            LOG.fatal("[NoppyAddon] THE CLIENT IS NOT USABLE WTIH NOPPYADDON WITHOUT METEOR CLIENT, PLEASE INSTALL METEOR CLIENT!");
+            LOG.fatal("[NoppyAddon] THE CLIENT IS NOT USABLE WTIH NOPPYADDON WITHOUT METEOR CLIENT, PLEASE INSTALL METEOR CLIENT!\nVERSION RECOMMEND: 0.5.6");
             System.exit(-1);
         }
     }
