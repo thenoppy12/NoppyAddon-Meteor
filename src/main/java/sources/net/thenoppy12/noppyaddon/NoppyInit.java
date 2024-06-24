@@ -3,9 +3,10 @@ package sources.net.thenoppy12.noppyaddon;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
 import meteordevelopment.meteorclient.systems.modules.Category;
 import meteordevelopment.meteorclient.systems.modules.Modules;
+import net.minecraft.item.Items;
 
 public class NoppyInit extends MeteorAddon {
-    public static final Category CATEGORY = new Category("NoppyAddon");
+    public static final Category CATEGORY = new Category("NoppyAddon", Items.LIGHT_BLUE_CONCRETE.getDefaultStack());
     @Override
     public void onInitialize() {
         NoppyAddon.INSTANCE.initialize();
