@@ -16,7 +16,6 @@ public class VanillaSpoofModule extends Module implements ConnectionPacketOutput
         EVENTS.add(ConnectionPacketOutputListener.class, this);
     }
     @EventHandler
-    @Override
     public void onSentConnectionPacket(ConnectionPacketOutputEvent event) {
         if(!this.isActive())
             return;
@@ -26,8 +25,7 @@ public class VanillaSpoofModule extends Module implements ConnectionPacketOutput
 
         // change client brand "fabric" back to "vanilla"
         if(packet.payload() instanceof BrandCustomPayload)
-            event.setPacket(
-                    new CustomPayloadC2SPacket(new BrandCustomPayload("vanilla")));
+            event.setPacket(new CustomPayloadC2SPacket(new BrandCustomPayload("vanilla")));
 
     }
 }
