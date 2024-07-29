@@ -8,7 +8,9 @@
     "thenoppy12"
   ],
   "contact": {
-    "repo": "https://github.com/MeteorDevelopment/meteor-addon-template"
+    "sources": "https://github.com/thenoppy12/NoppyAddon-Meteor",
+    "homepage": "https://thenoppy12.is-a.dev",
+    "issues": "https://dsc.gg/igoo"
   },
   "icon": "assets/noppyaddon/icon.png",
   "environment": "client",
@@ -26,6 +28,7 @@
   "depends": {
     "java": ">=21",
     "minecraft": ["1.20.4"],
-    "meteor-client": "0.5.6"
+    "meteor-client": "0.5.6",
+    "fabric-api": "*"
   }
 }

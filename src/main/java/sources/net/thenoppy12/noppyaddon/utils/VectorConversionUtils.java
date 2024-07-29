@@ -1,9 +1,9 @@
-package sources.net.thenoppy12.noppyaddon.util;
+package sources.net.thenoppy12.noppyaddon.utils;
 
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.Vec3i;
 
-public class VectorConversionUtil {
+public class VectorConversionUtils {
     public static Vec3i convert(Vec3d vec3d) {
         int x = (int) Math.floor(vec3d.getX());
         int y = (int) Math.floor(vec3d.getY());
